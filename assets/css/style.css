@@ -757,7 +757,40 @@ main {
 .clients-item img:hover { filter: grayscale(0); }
 
 
+/**
+ * #employers 
+ */
 
+ .employers { margin-bottom: 15px; }
+
+ .employers-list {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   gap: 15px;
+   margin: 0 -15px;
+   padding: 25px;
+   padding-bottom: 25px;
+   overflow-x: auto;
+   scroll-behavior: smooth;
+   overscroll-behavior-inline: contain;
+   scroll-snap-type: inline mandatory;
+   scroll-padding-inline: 25px;
+ }
+ 
+ .employers-item {
+   min-width: 50%;
+   scroll-snap-align: start;
+ }
+ 
+ .employers-item img {
+   width: 100%;
+   filter: grayscale(1);
+   transition: var(--transition-1);
+ }
+ 
+ .employers-item img:hover { filter: grayscale(0); }
+ 
 
 
 /*-----------------------------------*\
@@ -1241,7 +1274,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .clients-item { min-width: calc(33.33% - 10px); }
 
-
+  /**
+   * client
+   */
+  .employers-item { min-width: calc(33.33% - 10px); }
 
   /**
    * #PORTFOLIO, BLOG 
@@ -1482,7 +1518,16 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .clients-item { min-width: calc(33.33% - 35px); }
 
+  /* employers */
 
+  .employers-list {
+    gap: 50px;
+    margin: 0 -30px;
+    padding: 45px;
+    scroll-padding-inline: 45px;
+  }
+
+  .employers-item { min-width: calc(33.33% - 35px); }
 
   /**
    * #RESUME
@@ -1739,6 +1784,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   .clients-item { min-width: calc(25% - 38px); }
 
 
+  /* employers */
+
+  .employers-item { min-width: calc(25% - 38px); }
 
   /**
    * PORTFOLIO
